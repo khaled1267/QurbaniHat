@@ -9,7 +9,7 @@
     "age": 3,
     "location": "Bogura",
     "description": "Healthy deshi cow suitable for Qurbani. Well fed with natural খাবার। সুস্থ ও টিকাদানকৃত।",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Cow_female_black_white.jpg/320px-Cow_female_black_white.jpg",
+    "image": "/127071-cow-354428_1920.jpg",
     "category": "Large Animal"
   },
   {
@@ -22,7 +22,7 @@
     "age": 4,
     "location": "Dhaka",
     "description": "বড় ওজনের প্রিমিয়াম গরু। ভেটেরিনারি সনদপ্রাপ্ত ও সুস্থ।",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Cow_female_black_white.jpg/320px-Cow_female_black_white.jpg",
+    "image": "/alexas_fotos-cow-2782461_1920.jpg",
     "category": "Large Animal"
   },
   {
@@ -35,7 +35,7 @@
     "age": 3,
     "location": "Sylhet",
     "description": "পাকিস্তানি জাতের উন্নত গরু। কোরবানির জন্য বেস্ট চয়েস।",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Cow_female_black_white.jpg/320px-Cow_female_black_white.jpg",
+    "image": "/antranias-goat-4512578_1920.jpg",
     "category": "Large Animal"
   },
   {
@@ -48,7 +48,7 @@
     "age": 5,
     "location": "Mymensingh",
     "description": "আমেরিকান ব্রাহমান জাতের বিশাল গরু। অত্যন্ত সুস্থ ও শক্তিশালী।",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Cow_female_black_white.jpg/320px-Cow_female_black_white.jpg",
+    "image": "/anitabozic-cow-6749229_1920.jpg",
     "category": "Large Animal"
   },
   {
@@ -61,7 +61,7 @@
     "age": 3,
     "location": "Chittagong",
     "description": "চট্টগ্রামের বিখ্যাত লাল গরু। রোগ প্রতিরোধ ক্ষমতা বেশি।",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Cow_female_black_white.jpg/320px-Cow_female_black_white.jpg",
+    "image": "/butenko94-animal-2804495_1920.jpg",
     "category": "Large Animal"
   },
   {
@@ -74,7 +74,7 @@
     "age": 4,
     "location": "Gazipur",
     "description": "ইউরোপিয়ান হলস্টেইন জাতের গরু। বিশাল আকার ও উন্নত মানের।",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Cow_female_black_white.jpg/320px-Cow_female_black_white.jpg",
+    "image": "/erwinbosman-bull-9667294_1920.jpg",
     "category": "Large Animal"
   },
   {
@@ -87,7 +87,7 @@
     "age": 4,
     "location": "Rangpur",
     "description": "ভারতীয় গির জাতের উন্নত গরু। রোগমুক্ত ও সুস্থ।",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Cow_female_black_white.jpg/320px-Cow_female_black_white.jpg",
+    "image": "/hansbenn-goat-7609397_1920.jpg",
     "category": "Large Animal"
   },
   {
@@ -100,7 +100,7 @@
     "age": 4,
     "location": "Dinajpur",
     "description": "ব্রাজিলিয়ান নেলোর জাতের গরু। গরম আবহাওয়ায় ভালো থাকে।",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Cow_female_black_white.jpg/320px-Cow_female_black_white.jpg",
+    "image": "/jhenning-cow-7395115.jpg",
     "category": "Large Animal"
   },
   {
@@ -113,9 +113,9 @@
     "age": 5,
     "location": "Cumilla",
     "description": "স্কটিশ অ্যাঙ্গাস জাতের বিশাল ষাঁড়। সর্বোচ্চ মানের মাংস।",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Cow_female_black_white.jpg/320px-Cow_female_black_white.jpg",
+    "image": "/simonprodl-cow-842564_1920.jpg",
     "category": "Large Animal"
-  },
+  }, 
   {
     "id": 10,
     "name": "Hariana Cow",
@@ -126,7 +126,7 @@
     "age": 3,
     "location": "Rajshahi",
     "description": "হরিয়ানা জাতের শক্তিশালী গরু। কাজে ও মাংসে সমান উপযোগী।",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Cow_female_black_white.jpg/320px-Cow_female_black_white.jpg",
+    "image": "/matthiasboeckel-cow-7214228_1920.jpg",
     "category": "Large Animal"
   },
   {
@@ -139,7 +139,7 @@
     "age": 2,
     "location": "Rajshahi",
     "description": "ছোট পরিবারের জন্য আদর্শ ছাগল। সুস্থ ও প্রাকৃতিক খাবারে লালিত।",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hausziege_04.jpg/320px-Hausziege_04.jpg",
+    "image": "/public/manfredrichter-goat-7821624_1920.jpg",
     "category": "Small Animal"
   },
   {
@@ -152,7 +152,7 @@
     "age": 3,
     "location": "Chittagong",
     "description": "বড় সাইজের ছাগল। মাংস ও দুধ দুটোর জন্যই বিখ্যাত।",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hausziege_04.jpg/320px-Hausziege_04.jpg",
+    "image": "/leo_65-goat-1570357_1920.jpg",
     "category": "Small Animal"
   },
   {
@@ -165,7 +165,7 @@
     "age": 3,
     "location": "Comilla",
     "description": "দক্ষিণ আফ্রিকান বোয়ার জাতের ছাগল। মাংসের জন্য বিখ্যাত।",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hausziege_04.jpg/320px-Hausziege_04.jpg",
+    "image": "/public/nennieinszweidrei-goat-7506792.jpg",
     "category": "Small Animal"
   },
   {
@@ -178,7 +178,7 @@
     "age": 2,
     "location": "Narayanganj",
     "description": "রাজস্থানি সিরোহি জাতের ছাগল। দ্রুত বৃদ্ধি পায় ও সুস্বাদু মাংস।",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hausziege_04.jpg/320px-Hausziege_04.jpg",
+    "image": "/public/rschaubhut-goat-5645064_1920.jpg",
     "category": "Small Animal"
   },
   {
@@ -191,7 +191,7 @@
     "age": 3,
     "location": "Tangail",
     "description": "মহারাষ্ট্রের উসমানাবাদি জাতের বড় ছাগল। কোরবানির জন্য আদর্শ।",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hausziege_04.jpg/320px-Hausziege_04.jpg",
+    "image": "/hansbenn-goat-7662340_1920.jpg",
     "category": "Small Animal"
   },
   {
@@ -204,7 +204,7 @@
     "age": 3,
     "location": "Barishal",
     "description": "কালাহারি রেড জাতের বিদেশি ছাগল। লাল রঙের ও মাংসল।",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hausziege_04.jpg/320px-Hausziege_04.jpg",
+    "image": "/public/worldinmyeyes-cow-5277271.jpg",
     "category": "Small Animal"
   },
   {
@@ -217,7 +217,7 @@
     "age": 2,
     "location": "Pabna",
     "description": "ছোট ও মাংসল বারবারি জাতের ছাগল। দ্রুত বড় হয়।",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hausziege_04.jpg/320px-Hausziege_04.jpg",
+    "image": "/pexels-guvo59-29932546 (1).jpg",
     "category": "Small Animal"
   },
   {
@@ -230,7 +230,7 @@
     "age": 3,
     "location": "Jessore",
     "description": "পাঞ্জাবি বিটাল জাতের বড় ছাগল। লম্বা কান ও মাংসল শরীর।",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hausziege_04.jpg/320px-Hausziege_04.jpg",
+    "image": "/pexels-nguyendesigner-37100535.jpg",
     "category": "Small Animal"
   },
   {
@@ -243,7 +243,7 @@
     "age": 4,
     "location": "Khulna",
     "description": "নুবিয়ান জাতের বিদেশি ছাগল। বড় শরীর ও উন্নত মাংসের মান।",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hausziege_04.jpg/320px-Hausziege_04.jpg",
+    "image": "/pexels-lebele-7604190.jpg",
     "category": "Small Animal"
   },
   {
@@ -256,7 +256,7 @@
     "age": 4,
     "location": "Faridpur",
     "description": "কাশ্মীরি চাংথাঙ্গি জাতের বিরল ছাগল। অত্যন্ত মাংসল ও সুস্বাদু।",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hausziege_04.jpg/320px-Hausziege_04.jpg",
+    "image": "/pexels-femke-hansen-656224999-18271691.jpg",
     "category": "Small Animal"
   }
 ]

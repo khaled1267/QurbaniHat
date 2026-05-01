@@ -5,21 +5,21 @@ import Link from "next/link";
 
 const FeaturedAnimals =   async() => {
     const response = await fetch(
-    "@/animal.json",
+    "http://localhost:3000/animal.json",
   );
   const data = await response.json();
   console.log(data);
-  const topphotos = data.slice(0, 8);
-  console.log(topphotos);
+  const featured = data.slice(0, 4);
+  console.log(featured);
     
 
   return (
-    <section className="mt-12">
+    <section className="mt-12 w-10/12 mx-auto">
       {/* Section Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h2 className="text-2xl font-semibold text-[#EAF3DE]">
-            Featured <span className="text-[#97C459]">Animals</span>
+          <h2 className="text-2xl font-semibold text-[#639922] ">
+            Featured <span className="text-[#639922]">Animals</span>
           </h2>
           <p className="text-xs text-[#639922] mt-1">এই সপ্তাহের সেরা বাছাই</p>
         </div>
@@ -32,25 +32,25 @@ const FeaturedAnimals =   async() => {
       </div>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {featured.map((animal) => (
           <div
             key={animal.id}
             className="bg-[#1a3a0a] border border-[#3B6D11] rounded-xl overflow-hidden hover:border-[#97C459] transition group"
           >
             {/* Image */}
-            <div className="relative h-44 bg-[#2d5a14] flex items-center justify-center overflow-hidden">
+            <div className="relative h-69 bg-[#2d5a14] flex items-center justify-center overflow-hidden">
               <Image
                 src={animal.image}
                 alt={animal.name}
                 fill
                 className="object-cover group-hover:scale-105 transition duration-300"
-              />
-              {/* Category Badge */}
+              /> 
+              
               <span className="absolute top-2 left-2 bg-[#1a3a0a]/80 text-[#97C459] text-[10px] px-2 py-1 rounded-full">
                 {animal.category}
               </span>
-              {/* Type Badge */}
+             
               <span className="absolute top-2 right-2 bg-[#97C459] text-[#173404] text-[10px] font-semibold px-2 py-1 rounded-full">
                 {animal.type === "Cow" ? "🐄" : "🐐"} {animal.type}
               </span>

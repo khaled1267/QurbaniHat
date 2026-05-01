@@ -1,0 +1,64 @@
+{
+  "breeds": [
+    {
+      "id": 1,
+      "rank": "#1",
+      "image": "/hansbenn-goat-7609397_1920.jpg",
+      "name": "Local Deshi",
+      "type": "Cow",
+      "desc": "Most in demand",
+      "price": "৳80,000–1,50,000",
+      "tag": "Most Popular"
+    },
+    {
+      "id": 2,
+      "rank": "#2",
+      "image": "/butenko94-animal-2804495_1920.jpg",
+      "name": "Black Bengal",
+      "type": "Goat",
+      "desc": "Ideal for small families",
+      "price": "৳15,000–30,000",
+      "tag": "Best Value"
+    },
+    {
+      "id": 3,
+      "rank": "#3",
+       "image": "/anitabozic-cow-6749229_1920.jpg",
+      "name": "Friesian Cross",
+      "type": "Cow",
+      "desc": "Large weight, premium quality",
+      "price": "৳2,00,000+",
+      "tag": "Premium"
+    },
+    {
+      "id": 4,
+      "rank": "#4",
+       "image": "/antranias-goat-4512578_1920.jpg",
+      "name": "Boer Goat",
+      "type": "Goat",
+      "desc": "Famous for meat production",
+      "price": "৳40,000–55,000",
+      "tag": "Trending"
+    },
+    {
+      "id": 5,
+      "rank": "#5",
+     "image": "/127071-cow-354428_1920.jpg",
+      "name": "Shahiwal",
+      "type": "Cow",
+      "desc": "Improved Pakistani breed",
+      "price": "৳1,50,000–2,00,000",
+      "tag": "Popular"
+    },
+    {
+      "id": 6,
+      "rank": "#6",
+      "image": "/alexas_fotos-cow-2782461_1920.jpg",
+      "name": "Jamunapari",
+      "type": "Goat",
+      "desc": "Large size and high quality",
+      "price": "৳30,000–45,000",
+      "tag": "Popular"
+    }
+  ]
+}
