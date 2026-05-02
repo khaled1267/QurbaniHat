@@ -1,3 +1,18 @@
+import React from 'react';
+
+const Animalpage = () => {
+  return (
+    <div>
+      <h1>All Animals Page </h1>
+    </div>
+  );
+};
+
+export default Animalpage;
+
+
+
+
 // import Animal from '@/components/Animal';
 // import React from 'react';
 
