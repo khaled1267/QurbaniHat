@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { authClient } from '../lib/auth-client'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import { toast } from 'react-toastify'
 
 const Register = () => {
   const [error, setError] = useState('')
