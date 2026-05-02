@@ -139,7 +139,7 @@
     "age": 2,
     "location": "Rajshahi",
     "description": "ছোট পরিবারের জন্য আদর্শ ছাগল। সুস্থ ও প্রাকৃতিক খাবারে লালিত।",
-    "image": "/public/manfredrichter-goat-7821624_1920.jpg",
+    "image": "/manfredrichter-goat-7821624_1920.jpg",
     "category": "Small Animal"
   },
   {
@@ -165,7 +165,7 @@
     "age": 3,
     "location": "Comilla",
     "description": "দক্ষিণ আফ্রিকান বোয়ার জাতের ছাগল। মাংসের জন্য বিখ্যাত।",
-    "image": "/public/nennieinszweidrei-goat-7506792.jpg",
+    "image": "/nennieinszweidrei-goat-7506792.jpg",
     "category": "Small Animal"
   },
   {
@@ -178,7 +178,7 @@
     "age": 2,
     "location": "Narayanganj",
     "description": "রাজস্থানি সিরোহি জাতের ছাগল। দ্রুত বৃদ্ধি পায় ও সুস্বাদু মাংস।",
-    "image": "/public/rschaubhut-goat-5645064_1920.jpg",
+    "image": "/rschaubhut-goat-5645064_1920.jpg",
     "category": "Small Animal"
   },
   {
@@ -204,7 +204,7 @@
     "age": 3,
     "location": "Barishal",
     "description": "কালাহারি রেড জাতের বিদেশি ছাগল। লাল রঙের ও মাংসল।",
-    "image": "/public/worldinmyeyes-cow-5277271.jpg",
+    "image": "/worldinmyeyes-cow-5277271.jpg",
     "category": "Small Animal"
   },
   {

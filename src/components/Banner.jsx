@@ -34,7 +34,7 @@ const Banner = () => {
         {/* Buttons */}
         <div className="flex gap-3 flex-wrap">
           <Link
-            href="/animals"
+            href="/all-animals"
             className="bg-[#97C459] text-[#173404] font-semibold text-sm px-6 py-2.5 rounded-lg hover:bg-[#C0DD97] transition"
           >
             🐄 সব পশু দেখুন

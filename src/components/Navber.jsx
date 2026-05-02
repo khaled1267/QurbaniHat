@@ -3,12 +3,15 @@
 import { authClient } from "@/app/lib/auth-client";
 import { Avatar, AvatarFallback, AvatarImage } from "@heroui/react";
 import Image from "next/image";
-import logoimg from "../../public/min_main-logoo.png"
+import logoimg from "../../public/min_main-logoo.png";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const { data: session, isPending } = authClient.useSession();
   const user = session?.user;
+  const pathname = usePathname();
+  const isActive = (path) => pathname === path;
 
   const handleLogout = async () => {
     await authClient.signOut();
@@ -17,14 +20,12 @@ const Navbar = () => {
   return (
     <div className="bg-[#1a3a0a] px-4 sticky top-0 z-50">
       <nav className="flex justify-between items-center py-3 max-w-7xl mx-auto w-full">
-
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-2">
           <div className="w-9 h-9 bg-[#97C459] rounded-lg flex items-center justify-center text-lg">
             🌙
           </div>
           <h3 className="text-[#C0DD97] font-semibold text-lg">
-            
             <Image
               src={logoimg}
               alt="Logo"
@@ -40,7 +41,11 @@ const Navbar = () => {
           <li>
             <Link
               href="/"
-              className="text-[#EAF3DE] border-b border-[#97C459] pb-0.5 hover:text-[#97C459] transition"
+              className={`pb-0.5 transition px-3 py-1 rounded-md ${
+                isActive("/")
+                  ? "bg-[#97C459] text-[#173404]"
+                  : "text-[#97C459] hover:text-[#C0DD97]"
+              }`}
             >
               Home
             </Link>
@@ -48,7 +53,11 @@ const Navbar = () => {
           <li>
             <Link
               href="/all-animals"
-              className="text-[#97C459] hover:text-[#C0DD97] transition"
+              className={`px-3 py-1 rounded-md transition ${
+                isActive("/all-animals")
+                  ? "bg-[#97C459] text-[#173404]"
+                  : "text-[#97C459] hover:text-[#C0DD97]"
+              }`}
             >
               All Animals
             </Link>
@@ -57,12 +66,20 @@ const Navbar = () => {
           {/* Profile link — only when logged in */}
           {user && (
             <li>
-              <Link
-                href="/profile"
-                className="text-[#97C459] hover:text-[#C0DD97] transition"
-              >
-                My Profile
-              </Link>
+              {user && (
+                <li>
+                  <Link
+                    href="/profile"
+                    className={`px-3 py-1 rounded-md transition ${
+                      isActive("/profile")
+                        ? "bg-[#97C459] text-[#173404]"
+                        : "text-[#97C459] hover:text-[#C0DD97]"
+                    }`}
+                  >
+                    My Profile
+                  </Link>
+                </li>
+              )}
             </li>
           )}
         </ul>
@@ -122,7 +139,6 @@ const Navbar = () => {
             </div>
           )}
         </div>
-
       </nav>
     </div>
   );
