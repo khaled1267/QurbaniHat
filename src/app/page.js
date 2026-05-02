@@ -8,9 +8,9 @@ export default function Home() {
   return ( 
     <div>
       <Banner />
-      <FeaturedAnimals />
-      <QurbaniTips />
-      <TopBreeds />
+      {/* <FeaturedAnimals /> */}
+      {/* <QurbaniTips /> */}
+      {/* <TopBreeds /> */}
     </div>
   );
 }
