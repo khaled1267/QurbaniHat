@@ -2,7 +2,7 @@ import Image from "next/image";
 
 // src/components/TopBreeds.jsx
 const TopBreeds = async () => {
-  const response = await fetch("http://localhost:3000/topbreeds.json");
+  const response = await fetch("https://qurbani-hat-iota.vercel.app/topbreeds.json");
   const topanimal = await response.json();
 
   return (
