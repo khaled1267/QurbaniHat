@@ -15,6 +15,15 @@ const Register = () => {
     const photo = e.target.photo.value
     const password = e.target.password.value
 
+
+     const loginSuccess = true; 
+    
+        if (loginSuccess) {
+          toast.success('Login Successful!'); // এই লাইনটি টোস্ট দেখাবে
+          // এরপর চাইলে রিডাইরেক্ট করতে পারেন
+        } else {
+          toast.error('Login Failed! Please try again.');
+        }
     // Validation
     if (name.length < 3) {
       return setError('নাম কমপক্ষে ৩ অক্ষরের হতে হবে')
@@ -44,6 +53,14 @@ const Register = () => {
     const { data, error } = await authClient.signIn.social({
       provider: "google",
     })
+     const loginSuccess = true; 
+    
+        if (loginSuccess) {
+          toast.success('Login Successful!'); // এই লাইনটি টোস্ট দেখাবে
+          // এরপর চাইলে রিডাইরেক্ট করতে পারেন
+        } else {
+          toast.error('Login Failed! Please try again.');
+        }
   }
 
   return (

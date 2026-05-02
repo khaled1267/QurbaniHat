@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { GiCow } from "react-icons/gi";
 
 const Banner = () => {
   return (
@@ -35,9 +36,12 @@ const Banner = () => {
         <div className="flex gap-3 flex-wrap">
           <Link
             href="/all-animals"
-            className="bg-[#97C459] text-[#173404] font-semibold text-sm px-6 py-2.5 rounded-lg hover:bg-[#C0DD97] transition"
+            className="bg-[#97C459] text-[#173404] font-semibold text-sm px-6 py-2.5 rounded-lg hover:bg-[#C0DD97] transition" 
           >
-            🐄 সব পশু দেখুন
+             <div className="flex items-center gap-2">
+             <div><GiCow size={25}/></div> 
+             <div>সব পশু দেখুন</div>
+             </div>
           </Link>
           <Link
             href="/about"

@@ -1,55 +1,55 @@
 [
   {
     "id": 1,
-    "icon": "⚖️",
-    "title": "Check Weight",
+    "icon": "/icons8-scales.gif",
+    "title": "Check Weight hjghjhj",
     "desc": "Ensure the sacrificial animal is at least 2 years old and has proper weight."
   },
   {
     "id": 2,
-    "icon": "🩺",
+    "icon": "/icons8-heart-with-pulse.gif",
     "title": "Health Check",
     "desc": "Make sure the animal has veterinary certification and proper vaccinations."
   },
   {
     "id": 3,
-    "icon": "📋",
+    "icon": "/icons8-open-book.gif",
     "title": "Book in Advance",
     "desc": "Booking early ensures better price and availability of the animal."
   },
   {
     "id": 4,
-    "icon": "🚚",
+    "icon": "/icons8-delivery-time.gif",
     "title": "Confirm Delivery",
     "desc": "Confirm delivery date and location at the time of booking."
   },
   {
     "id": 5,
-    "icon": "💰",
+    "icon": "/icons8-cash.gif",
     "title": "Verify Price",
     "desc": "Check market rates before purchasing to ensure a fair price."
   },
   {
     "id": 6,
-    "icon": "📸",
+    "icon": "/icons8-checked-radio-button.gif",
     "title": "Check Photos",
     "desc": "Verify real images and videos of the animal before booking."
   },
   {
     "id": 7,
-    "icon": "🧾",
+    "icon": "/icons8-check-all.gif",
     "title": "Get Proper Receipt",
     "desc": "Always collect a payment receipt or confirmation after booking."
   },
   {
     "id": 8,
-    "icon": "🐄",
+    "icon": "/icons8-cow-64.png",
     "title": "Choose Suitable Animal",
     "desc": "Select an animal that meets your Qurbani requirements and preferences."
   },
   {
     "id": 9,
-    "icon": "📍",
+    "icon": "/icons8-location.gif",
     "title": "Check Seller Location",
     "desc": "Verify the seller’s location and authenticity before booking."
   }

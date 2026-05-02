@@ -24,12 +24,7 @@ const FeaturedAnimals =   async() => {
           </h2>
           <p className="text-xs text-[#639922] mt-1">এই সপ্তাহের সেরা বাছাই</p>
         </div>
-        <Link
-          href="/animals"
-          className="text-sm text-[#97C459] border border-[#3B6D11] px-4 py-1.5 rounded-lg hover:bg-[#2d5a14] transition"
-        >
-          সব দেখুন →
-        </Link>
+        
       </div>
 
       {/* Cards Grid */}

@@ -3,6 +3,7 @@ import {  useState } from 'react'
 
 import { authClient } from '../lib/auth-client'
 import Link from 'next/link'
+import { toast } from 'react-toastify'
 
 const Login = () => {
   
@@ -15,6 +16,14 @@ const Login = () => {
     const email = e.target.email.value
     const password = e.target.password.value
 
+     const loginSuccess = true; 
+
+    if (loginSuccess) {
+      toast.success('Login Successful!'); // এই লাইনটি টোস্ট দেখাবে
+      // এরপর চাইলে রিডাইরেক্ট করতে পারেন
+    } else {
+      toast.error('Login Failed! Please try again.');
+    }
     // Validation
     if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
       return setError('সঠিক ইমেইল দিন')
@@ -30,6 +39,14 @@ const Login = () => {
     const { data, error } = await authClient.signIn.social({
       provider: "google",
     });
+     const loginSuccess = true; 
+
+    if (loginSuccess) {
+      toast.success('Login Successful!'); // এই লাইনটি টোস্ট দেখাবে
+      // এরপর চাইলে রিডাইরেক্ট করতে পারেন
+    } else {
+      toast.error('Login Failed! Please try again.');
+    }
 
   }
 
@@ -131,7 +148,7 @@ const Login = () => {
           অ্যাকাউন্ট নেই?{' '}
           <Link href="/register" className="text-[#97C459] font-medium hover:underline">
             রেজিস্ট্রেশন করুন →
-          </Link>
+          </Link> 
         </p>
 
       </div>
