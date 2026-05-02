@@ -2,7 +2,7 @@ import Animal from "@/components/Animal";
 import React from "react";
 
 const Allanimals = async () => {
-  const response = await fetch("/animal.json");
+  const response = await fetch("https://qurbani-hat-iota.vercel.app/animal.json");
   const data = await response.json();
   const sortedData = [...data].sort((a, b) => a.price - b.price);
 
