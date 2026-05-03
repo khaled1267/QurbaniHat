@@ -23,7 +23,7 @@ const QurbaniTips = async () => {
 
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
-        {data.map((tip) => (
+        {data.tips.map((tip) => (
           <div
             key={tip.id}
             className="bg-[#1a3a0a] border border-[#3B6D11] rounded-xl p-5 hover:border-[#97C459] transition"
