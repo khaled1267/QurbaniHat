@@ -1,59 +1,65 @@
-"use client"
-import {  useState } from 'react'
-
-import { authClient } from '../lib/auth-client'
-import Link from 'next/link'
-import { toast } from 'react-toastify'
+"use client";
+import { useState } from "react";
+import { authClient } from "../../lib/auth-client";
+import Link from "next/link";
+import { toast } from "react-toastify";
+import { useRouter } from "next/navigation"; // রিডাইরেক্টের জন্য
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
-  
-    
-  
-  const [error, setError] = useState('')
+  const [error, setError] = useState("");
+  const router = useRouter(); // রাউটার ইনিশিয়ালাইজেশন
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    const email = e.target.email.value
-    const password = e.target.password.value
+    e.preventDefault();
+    setError(""); // আগের এরর ক্লিয়ার করা
+    
+    const email = e.target.email.value;
+    const password = e.target.password.value;
 
-     const loginSuccess = true; 
-
-    if (loginSuccess) {
-      toast.success('Login Successful!'); // এই লাইনটি টোস্ট দেখাবে
-      // এরপর চাইলে রিডাইরেক্ট করতে পারেন
-    } else {
-      toast.error('Login Failed! Please try again.');
-    }
-    // Validation
+    // ১. ভ্যালিডেশন (সবার আগে)
     if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
-      return setError('সঠিক ইমেইল দিন')
+      return setError("সঠিক ইমেইল দিন");
     }
     if (password.length < 6) {
-      return setError('পাসওয়ার্ড কমপক্ষে ৬ অক্ষরের হতে হবে')
+      return setError("পাসওয়ার্ড কমপক্ষে ৬ অক্ষরের হতে হবে");
     }
 
-    
-  }
+    // ২. লগইন রিকোয়েস্ট (উদাহরণস্বরূপ authClient ব্যবহার করে)
+    try {
+      const { data, error: authError } = await authClient.signIn.email({
+        email,
+        password,
+        callbackURL: "/", // লগইন শেষে যেখানে যাবে
+      });
+
+      if (authError) {
+        toast.error(authError.message || "লগইন ব্যর্থ হয়েছে!");
+      } else {
+        toast.success("সফলভাবে লগইন হয়েছে! 🎉");
+        router.push("/"); // হোম পেজে নিয়ে যাবে
+      }
+    } catch (err) {
+      toast.error("কিছু একটা ভুল হয়েছে। আবার চেষ্টা করুন।");
+    }
+  };
 
   const handleGoogleLogin = async () => {
-    const { data, error } = await authClient.signIn.social({
-      provider: "google",
-    });
-     const loginSuccess = true; 
-
-    if (loginSuccess) {
-      toast.success('Login Successful!'); // এই লাইনটি টোস্ট দেখাবে
-      // এরপর চাইলে রিডাইরেক্ট করতে পারেন
-    } else {
-      toast.error('Login Failed! Please try again.');
+    try {
+      await authClient.signIn.social({
+        provider: "google",
+        callbackURL: "/", // সফল হলে হোম পেজে যাবে
+      });
+      // গুগল লগইনের ক্ষেত্রে সাধারণত রিডাইরেক্ট হয়ে যায়, 
+      // তাই আলাদা করে টোস্ট এখানে নাও দেখতে পারেন যদি না সেটা সাকসেস পেজ হয়।
+    } catch (err) {
+      toast.error("গুগল লগইন ব্যর্থ হয়েছে!");
     }
-
-  }
+  };
 
   return (
     <div className="min-h-screen bg-[#0a1f05] flex items-center justify-center px-4">
       <div className="bg-[#1a3a0a] border border-[#3B6D11] rounded-2xl p-9 w-full max-w-md">
-
         {/* TOP ICON */}
         <div className="text-center mb-6">
           <div className="w-14 h-14 bg-[#97C459] rounded-xl inline-flex items-center justify-center text-3xl">
@@ -69,41 +75,34 @@ const Login = () => {
 
         {/* FORM */}
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-
-          {/* Email */}
           <div>
-            <label className="text-xs text-[#97C459] mb-1 block">
-              ইমেইল
-            </label>
+            <label className="text-xs text-[#97C459] mb-1 block">ইমেইল</label>
             <input
               type="email"
               name="email"
+              required
               placeholder="john@example.com"
-              className="w-full px-4 py-2.5 rounded-lg border border-[#3B6D11] bg-[#0f2206] text-[#EAF3DE] text-sm placeholder-[#639922] focus:outline-none focus:border-[#97C459]"
+              className="w-full px-4 py-2.5 rounded-lg border border-[#3B6D11] bg-[#0f2206] text-[#EAF3DE] text-sm focus:outline-none focus:border-[#97C459]"
             />
           </div>
 
-          {/* Password */}
           <div>
-            <label className="text-xs text-[#97C459] mb-1 block">
-              পাসওয়ার্ড
-            </label>
+            <label className="text-xs text-[#97C459] mb-1 block">পাসওয়ার্ড</label>
             <input
               type="password"
               name="password"
+              required
               placeholder="আপনার পাসওয়ার্ড দিন"
-              className="w-full px-4 py-2.5 rounded-lg border border-[#3B6D11] bg-[#0f2206] text-[#EAF3DE] text-sm placeholder-[#639922] focus:outline-none focus:border-[#97C459]"
+              className="w-full px-4 py-2.5 rounded-lg border border-[#3B6D11] bg-[#0f2206] text-[#EAF3DE] text-sm focus:outline-none focus:border-[#97C459]"
             />
           </div>
 
-          {/* Error */}
           {error && (
             <p className="text-xs text-red-400 bg-red-900/20 border border-red-800 px-3 py-2 rounded-lg">
               ⚠️ {error}
             </p>
           )}
 
-          {/* Sign In Button */}
           <button
             type="submit"
             className="w-full bg-[#97C459] text-[#173404] font-semibold text-sm py-2.5 rounded-lg hover:bg-[#C0DD97] transition mt-1"
@@ -111,49 +110,40 @@ const Login = () => {
             ✅ সাইন ইন
           </button>
 
-          {/* Reset Button */}
           <button
             type="reset"
-            onClick={() => setError('')}
+            onClick={() => setError("")}
             className="w-full bg-transparent text-[#97C459] text-sm py-2.5 rounded-lg border border-[#3B6D11] hover:bg-[#2d5a14] transition"
           >
             রিসেট করুন
           </button>
-
         </form>
 
-        {/* DIVIDER */}
         <div className="flex items-center gap-3 my-5">
           <hr className="flex-1 border-[#3B6D11]" />
           <span className="text-xs text-[#639922]">অথবা</span>
           <hr className="flex-1 border-[#3B6D11]" />
         </div>
 
-        {/* GOOGLE LOGIN */}
         <button
           onClick={handleGoogleLogin}
+          type="button"
           className="w-full bg-[#0f2206] text-[#C0DD97] text-sm py-2.5 rounded-lg border border-[#3B6D11] hover:bg-[#2d5a14] transition flex items-center justify-center gap-2"
         >
-          <svg width="16" height="16" viewBox="0 0 48 48">
-            <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
-            <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
-            <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
-            <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
-          </svg>
+          {/* Google Icon SVG (same as yours) */}
+           <FaGoogle />
           Google দিয়ে Continue করুন
         </button>
 
-        {/* Sign Up Link */}
         <p className="text-center mt-5 text-xs text-[#639922]">
-          অ্যাকাউন্ট নেই?{' '}
+          অ্যাকাউন্ট নেই?{" "}
           <Link href="/register" className="text-[#97C459] font-medium hover:underline">
             রেজিস্ট্রেশন করুন →
-          </Link> 
+          </Link>
         </p>
-
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-// import logoimg from "";
+
 import { Avatar, AvatarFallback, AvatarImage } from "@heroui/react";
 import { Profileupdate } from "@/components/Profileupdate";
-import { authClient } from "../lib/auth-client";
+import { authClient } from "../../lib/auth-client";
 import Image from "next/image";
 
 const ProfileCard = () => {
@@ -24,10 +24,8 @@ const ProfileCard = () => {
   return (
     <div className="min-h-screen bg-[#0a1f05] flex items-center justify-center p-4">
       <div className="w-full max-w-sm">
-
         {/* TOP CARD */}
         <div className="bg-[#1a3a0a] border border-[#3B6D11] rounded-2xl p-8 text-center relative overflow-hidden">
-
           {/* BG decoration */}
           <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#2d5a14] rounded-full opacity-40"></div>
           <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-[#2d5a14] rounded-full opacity-30"></div>
@@ -66,9 +64,7 @@ const ProfileCard = () => {
             <h2 className="text-2xl font-bold text-[#EAF3DE] mb-1">
               {user?.name}
             </h2>
-            <p className="text-sm text-[#639922]">
-              {user?.email}
-            </p>
+            <p className="text-sm text-[#639922]">{user?.email}</p>
           </div>
 
           {/* Info Cards */}
@@ -91,17 +87,7 @@ const ProfileCard = () => {
           <div className="z-10 relative">
             <Profileupdate />
           </div>
-
         </div>
-
-         <Image
-                      src={logoimg}
-                      alt="Logo"
-                      width={110}
-                      height={110}
-                      className="ml-2"
-                    />
-
       </div>
     </div>
   );

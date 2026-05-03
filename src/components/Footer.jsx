@@ -1,5 +1,8 @@
+
+import Image from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaInstagramSquare, FaTwitter } from "react-icons/fa";
+
 
 const Footer = () => {
   return (
@@ -7,7 +10,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 py-12">
 
         {/* TOP SECTION */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
 
           {/* Brand */}
           <div className="md:col-span-1">
@@ -16,7 +19,10 @@ const Footer = () => {
                 🌙
               </div>
               <span className="text-[#C0DD97] font-semibold text-lg">
-                🐄 Qurbani<span className="text-[#97C459]">Hat</span>
+                <div className="flex items-center gap-1">
+                  <div>🐄</div>
+                  <div><Image src="https://i.ibb.co.com/tp2GDrpg/min-main-logoo.png" alt="Logo" width={80} height={80} /></div>
+                  </div> 
               </span>
             </Link>
             <p className="text-xs text-[#639922] leading-relaxed mb-4">
@@ -46,54 +52,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-sm font-semibold text-[#C0DD97] mb-4">
-              দ্রুত লিংক
-            </h3>
-            <ul className="flex flex-col gap-2.5">
-              <li>
-                <Link
-                  href="/"
-                  className="text-xs text-[#639922] hover:text-[#97C459] transition flex items-center gap-1.5"
-                >
-                  → হোম
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/animals"
-                  className="text-xs text-[#639922] hover:text-[#97C459] transition flex items-center gap-1.5"
-                >
-                  → সব পশু
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/login"
-                  className="text-xs text-[#639922] hover:text-[#97C459] transition flex items-center gap-1.5"
-                >
-                  → লগইন
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/register"
-                  className="text-xs text-[#639922] hover:text-[#97C459] transition flex items-center gap-1.5"
-                >
-                  → রেজিস্ট্রেশন
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/my-profile"
-                  className="text-xs text-[#639922] hover:text-[#97C459] transition flex items-center gap-1.5"
-                >
-                  → আমার প্রোফাইল
-                </Link>
-              </li>
-            </ul>
-          </div>
+         
 
           {/* Animal Categories */}
           <div>
@@ -179,9 +138,9 @@ const Footer = () => {
           </p>
 
           {/* Eid Badge */}
-          <div className="flex items-center gap-2 bg-[#2d5a14] border border-[#3B6D11] px-4 py-2 rounded-full">
+          <div className="flex items-center gap-2 bg-[#2d5a14] border border-[#3B6D11] px-4 py-2 rounded-full animate-pulse">
             <span className="text-sm">🌙</span>
-            <span className="text-xs text-[#C0DD97] font-medium">
+            <span className="text-xs text-[#C0DD97] font-medium animate-pulse">
               Eid ul-Adha 2025 Mubarak
             </span>
             <span className="text-sm">🐄</span>

@@ -3,18 +3,18 @@
 import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
-import { authClient } from "@/app/lib/auth-client";
+import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
 
 const AnimalDetails = ({ animal }) => {
   const router = useRouter();
+
   const { data: session } = authClient.useSession();
   const user = session?.user;
 
   const [submitted, setSubmitted] = useState(false);
 
   // যদি animal ডেটা না থাকে তবে এই লোডিং/এরর স্টেট দেখাবে
-  
 
   const handleBooking = (e) => {
     e.preventDefault();
@@ -31,13 +31,8 @@ const AnimalDetails = ({ animal }) => {
   return (
     <div className="min-h-screen bg-[#0a1f05] py-8 px-4">
       <div className="max-w-6xl mx-auto">
-        {/* Back Button */}
-        <button
-          onClick={() => router.back()}
-          className="text-sm text-[#97C459] border border-[#3B6D11] px-4 py-2 rounded-xl hover:bg-[#2d5a14] transition mb-6 flex items-center gap-2"
-        >
-          ← পিছনে যান
-        </button>
+      
+      
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* LEFT SIDE - Info */}
@@ -57,7 +52,6 @@ const AnimalDetails = ({ animal }) => {
                   <Image
                     src={animal.image}
                     alt={animal.name || "Animal Image"}
-                    
                     fill
                     className="object-contain"
                   />
@@ -88,13 +82,15 @@ const AnimalDetails = ({ animal }) => {
                 <div className="bg-[#0f2206] border border-[#2d5a14] rounded-xl p-3">
                   <p className="text-[10px] text-[#639922] mb-1">⚖️ ওজন</p>
                   <p className="text-base font-bold text-[#EAF3DE]">
-                    {animal.weight} <span className="text-xs font-normal">kg</span>
+                    {animal.weight}{" "}
+                    <span className="text-xs font-normal">kg</span>
                   </p>
                 </div>
                 <div className="bg-[#0f2206] border border-[#2d5a14] rounded-xl p-3">
                   <p className="text-[10px] text-[#639922] mb-1">🎂 বয়স</p>
                   <p className="text-base font-bold text-[#EAF3DE]">
-                    {animal.age} <span className="text-xs font-normal">বছর</span>
+                    {animal.age}{" "}
+                    <span className="text-xs font-normal">বছর</span>
                   </p>
                 </div>
                 <div className="bg-[#0f2206] border border-[#2d5a14] rounded-xl p-3">
@@ -155,7 +151,9 @@ const AnimalDetails = ({ animal }) => {
 
               <form onSubmit={handleBooking} className="flex flex-col gap-4">
                 <div>
-                  <label className="text-xs text-[#97C459] mb-1 block">আপনার নাম</label>
+                  <label className="text-xs text-[#97C459] mb-1 block">
+                    আপনার নাম
+                  </label>
                   <input
                     type="text"
                     name="name"
@@ -166,7 +164,9 @@ const AnimalDetails = ({ animal }) => {
                 </div>
 
                 <div>
-                  <label className="text-xs text-[#97C459] mb-1 block">ইমেইল</label>
+                  <label className="text-xs text-[#97C459] mb-1 block">
+                    ইমেইল
+                  </label>
                   <input
                     type="email"
                     name="email"
@@ -177,7 +177,9 @@ const AnimalDetails = ({ animal }) => {
                 </div>
 
                 <div>
-                  <label className="text-xs text-[#97C459] mb-1 block">ফোন নম্বর</label>
+                  <label className="text-xs text-[#97C459] mb-1 block">
+                    ফোন নম্বর
+                  </label>
                   <input
                     type="tel"
                     name="phone"
@@ -188,7 +190,9 @@ const AnimalDetails = ({ animal }) => {
                 </div>
 
                 <div>
-                  <label className="text-xs text-[#97C459] mb-1 block">ঠিকানা</label>
+                  <label className="text-xs text-[#97C459] mb-1 block">
+                    ঠিকানা
+                  </label>
                   <textarea
                     name="address"
                     required
@@ -207,7 +211,9 @@ const AnimalDetails = ({ animal }) => {
 
               {/* Price Summary with Optional Chaining */}
               <div className="mt-5 bg-[#0f2206] rounded-xl p-4 border border-[#2d5a14]">
-                <p className="text-xs text-[#639922] mb-3">💰 মূল্য সারসংক্ষেপ</p>
+                <p className="text-xs text-[#639922] mb-3">
+                  💰 মূল্য সারসংক্ষেপ
+                </p>
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-sm text-[#C0DD97]">{animal.name}</span>
                   <span className="text-sm font-semibold text-[#97C459]">

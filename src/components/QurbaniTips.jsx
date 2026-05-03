@@ -13,7 +13,7 @@ const QurbaniTips = async () => {
 
       {/* Header */}
       <div className="mb-6">
-        <h2 className="text-2xl font-semibold text-[#EAF3DE]">
+        <h2 className="text-2xl font-semibold text-[#97C459]">
           Qurbani <span className="text-[#97C459]">Tips</span>
         </h2>
         <p className="text-xs text-[#639922] mt-1">
