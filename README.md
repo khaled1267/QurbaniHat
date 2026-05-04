@@ -51,7 +51,7 @@ QurbaniHat is a modern livestock marketplace where users can explore animals for
 
 ## 🛠️ How to Run Locally
 
-git clone https://github.com/your-username/qurbani-hat
+git clone[ https://github.com/your-username/qurbani-hat](https://github.com/khaled1267/QurbaniHat)
 cd qurbani-hat
 npm install
 npm run dev
@@ -60,17 +60,7 @@ Open http://localhost:3000 in your browser.
 
 ---
 
-## 🔐 Environment Variables
 
-Create a .env.local file in the root directory:
-
-BETTER_AUTH_SECRET=your_secret_here
-BETTER_AUTH_URL=http://localhost:3000
-DATABASE_URL=your_database_url
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
-
----
 
 ## 🔒 Routes
 
