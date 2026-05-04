@@ -84,9 +84,9 @@ Open http://localhost:3000 in your browser.
 
 ## 👨‍💻 Developer
 
-- Name: Your Name
-- Email: your@email.com
-- GitHub: github.com/your-username
+- Name: khaled Mahmud
+- Email: khaledkhan1267@gmail.com
+- GitHub: [github.com/your-username](https://github.com/khaled1267)
 
 ---
 
