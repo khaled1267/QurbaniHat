@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 
 export function proxy(request) {
 
-  // Better Auth এর cookie check করো
+  
   const session = request.cookies.get('better-auth.session_token')?.value
 
   if (!session) {
