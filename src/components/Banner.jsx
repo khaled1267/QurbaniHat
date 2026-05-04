@@ -8,19 +8,17 @@ const Banner = () => {
   return (
     <div className="bg-[#1a3a0a] rounded-2xl px-6 md:px-8 py-8 md:py-12 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden mt-7 w-11/12 mx-auto">
 
-      {/* Background circles */}
       <div className="absolute -top-14 -right-14 w-52 h-52 bg-[#2d5a14] rounded-full"></div>
       <div className="absolute -bottom-10 left-1/3 w-36 h-36 bg-[#2d5a14] rounded-full opacity-50"></div>
 
-      {/* LEFT SIDE */}
+      
       <div className="flex-1 z-10 text-center md:text-left w-full">
 
-        {/* Tag */}
         <span className="animate__animated animate__fadeInDown inline-block bg-[#3B6D11] text-[#C0DD97] text-xs px-3 py-1 rounded-full font-medium mb-4">
           🌙 Eid ul-Adha 2025
         </span>
 
-        {/* Title */}
+       
         <h1 className="animate__animated animate__fadeInLeft animate__delay-1s text-2xl sm:text-3xl font-semibold text-[#EAF3DE] leading-snug mb-3">
           বিশ্বস্ত{" "}
           <span className="text-[#97C459]">Qurbani</span>
@@ -28,13 +26,11 @@ const Banner = () => {
           পশুর বাজার
         </h1>
 
-        {/* Description */}
         <p className="animate__animated animate__fadeInLeft animate__delay-1s text-sm text-[#97C459] leading-relaxed mb-6 max-w-sm mx-auto md:mx-0">
           গরু, ছাগল, ভেড়া — সরাসরি খামার থেকে।
           সহজে বুকিং দিন, ঘরে বসেই।
         </p>
 
-        {/* Buttons */}
         <div className="animate__animated animate__fadeInUp animate__delay-1s flex gap-3 flex-wrap justify-center md:justify-start">
           <Link
             href="/all-animals"
@@ -53,7 +49,6 @@ const Banner = () => {
           </Link>
         </div>
 
-        {/* Stats */}
         <div className="animate__animated animate__fadeInUp animate__delay-2s flex gap-6 mt-7 justify-center md:justify-start">
           <div>
             <h3 className="text-lg font-semibold text-[#C0DD97]">120+</h3>
@@ -72,7 +67,6 @@ const Banner = () => {
         </div>
       </div>
 
-      {/* RIGHT SIDE */}
       <div className="animate__animated animate__fadeInRight z-10 text-center flex-shrink-0 w-full md:w-auto">
         <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 relative mx-auto animate-pulse">
           <Image

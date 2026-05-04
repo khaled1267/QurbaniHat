@@ -9,10 +9,9 @@ const Footer = () => {
     <footer className="bg-[#0f2206] border-t border-[#2d5a14] mt-16">
       <div className="max-w-7xl mx-auto px-6 py-12">
 
-        {/* TOP SECTION */}
+      
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
 
-          {/* Brand */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <div className="w-9 h-9 bg-[#97C459] rounded-lg flex items-center justify-center text-lg">
@@ -29,7 +28,7 @@ const Footer = () => {
               বাংলাদেশের বিশ্বস্ত কোরবানির পশু বুকিং প্ল্যাটফর্ম। সরাসরি খামার থেকে আপনার দোরগোড়ায়।
             </p>
             
-            {/* Social Links - এখানে আপনার ভুল ছিল */}
+            
             <div className="flex gap-3">
               <a
                 href="#"
@@ -54,7 +53,7 @@ const Footer = () => {
 
          
 
-          {/* Animal Categories */}
+  
           <div>
             <h3 className="text-sm font-semibold text-[#C0DD97] mb-4">
               পশুর ধরন
@@ -89,7 +88,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
+          
           <div>
             <h3 className="text-sm font-semibold text-[#C0DD97] mb-4">
               যোগাযোগ করুন
@@ -128,16 +127,16 @@ const Footer = () => {
 
         </div>
 
-        {/* DIVIDER */}
+     
         <div className="h-px bg-[#2d5a14] mb-6"></div>
 
-        {/* BOTTOM */}
+       
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-[#639922]">
             © 2025 QurbaniHat. সর্বস্বত্ব সংরক্ষিত।
           </p>
 
-          {/* Eid Badge */}
+        
           <div className="flex items-center gap-2 bg-[#2d5a14] border border-[#3B6D11] px-4 py-2 rounded-full animate-pulse">
             <span className="text-sm">🌙</span>
             <span className="text-xs text-[#C0DD97] font-medium animate-pulse">

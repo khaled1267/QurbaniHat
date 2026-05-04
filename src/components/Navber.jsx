@@ -29,8 +29,7 @@ const Navbar = () => {
   return (
     <div className="bg-[#1a3a0a] px-4 sticky top-0 z-50">
       <nav className="flex justify-between items-center py-3 max-w-7xl mx-auto w-full">
-
-        {/* LOGO */}
+        
         <Link href="/" className="flex items-center gap-2">
           <div className="w-9 h-9 bg-[#97C459] rounded-lg flex items-center justify-center text-lg">
             🌙
@@ -44,7 +43,7 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* DESKTOP LINKS */}
+       
         <ul className="hidden md:flex items-center gap-8 text-sm">
           {navLinks.map((link) => (
             <li key={link.href}>
@@ -62,10 +61,17 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* DESKTOP AUTH */}
+        
         <div className="hidden md:flex items-center gap-3">
           {isPending ? (
-            <span className="text-xs text-[#639922]">Loading...</span>
+          <div className="flex items-center gap-2">
+  
+  <div className="w-4 h-4 border-2 border-[#639922] border-t-transparent rounded-full animate-spin"></div>
+  
+  <span className="text-xs text-[#639922] animate__animated animate__fadeIn animate__infinite">
+    Loading...
+  </span>
+</div>
           ) : user ? (
             <div className="flex items-center gap-3">
               <div className="text-right">
@@ -115,23 +121,27 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* MOBILE — Hamburger */}
+        
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden flex flex-col gap-1.5 p-2 z-50"
         >
-          <span className={`w-6 h-0.5 bg-[#97C459] rounded transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}></span>
-          <span className={`w-4 h-0.5 bg-[#97C459] rounded transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}></span>
-          <span className={`w-6 h-0.5 bg-[#97C459] rounded transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}></span>
+          <span
+            className={`w-6 h-0.5 bg-[#97C459] rounded transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+          ></span>
+          <span
+            className={`w-4 h-0.5 bg-[#97C459] rounded transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
+          ></span>
+          <span
+            className={`w-6 h-0.5 bg-[#97C459] rounded transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+          ></span>
         </button>
-
       </nav>
 
-      {/* MOBILE MENU */}
+     
       {menuOpen && (
         <div className="md:hidden bg-[#1a3a0a] border-t border-[#2d5a14] pb-4 px-4">
-
-          {/* Mobile Links */}
+          
           <ul className="flex flex-col gap-1 mt-3">
             {navLinks.map((link) => (
               <li key={link.href}>
@@ -144,21 +154,26 @@ const Navbar = () => {
                       : "text-[#97C459] hover:bg-[#2d5a14]"
                   }`}
                 >
-                  {link.href === "/" ? "🏠" : link.href === "/all-animals" ? "🐄" : "👤"} {link.label}
+                  {link.href === "/"
+                    ? "🏠"
+                    : link.href === "/all-animals"
+                      ? "🐄"
+                      : "👤"}{" "}
+                  {link.label}
                 </Link>
               </li>
             ))}
           </ul>
 
-          {/* Divider */}
+         
           <div className="h-px bg-[#2d5a14] my-3"></div>
 
-          {/* Mobile Auth */}
+          
           {isPending ? (
             <p className="text-xs text-[#639922] px-4">Loading...</p>
           ) : user ? (
             <div className="flex flex-col gap-3 px-2">
-              {/* User Info */}
+              
               <div className="flex items-center gap-3 bg-[#0f2206] rounded-xl p-3">
                 <div className="relative">
                   <Avatar>

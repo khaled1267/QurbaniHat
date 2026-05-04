@@ -1,4 +1,4 @@
-// src/components/QurbaniTips.jsx
+
 const QurbaniTips = async () => {
   const response = await fetch(
     "https://qurbani-hat-iota.vercel.app/trips.json",
@@ -11,7 +11,7 @@ const QurbaniTips = async () => {
   return (
     <section className="mt-12 w-10/12 mx-auto">
 
-      {/* Header */}
+     
       <div className="mb-6">
         <h2 className="text-2xl font-semibold text-[#97C459]">
           Qurbani <span className="text-[#97C459]">Tips</span>
@@ -21,7 +21,7 @@ const QurbaniTips = async () => {
         </p>
       </div>
 
-      {/* Grid */}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
         {data.tips.map((tip) => (
           <div

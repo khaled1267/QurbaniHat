@@ -7,7 +7,7 @@ const TopBreeds = async () => {
 
   return (
     <section className="mt-12 w-10/12 mx-auto">
-      {/* Header */}
+     
       <div className="mb-6">
         <h2 className="text-2xl font-semibold text-[#97C459]">
           Top <span className="text-[#97C459]">Breeds</span>
@@ -15,19 +15,19 @@ const TopBreeds = async () => {
         <p className="text-xs text-[#639922] mt-1">এই বছরের জনপ্রিয় জাত</p>
       </div>
 
-      {/* List */}
+      
       <div className="flex flex-col gap-3">
         {topanimal.breeds.map((breed) => (
           <div
             key={breed.id}
             className="bg-[#1a3a0a] border border-[#3B6D11] rounded-xl px-5 py-4 flex items-center gap-4 hover:border-[#97C459] transition"
           >
-            {/* Rank */}
+            
             <span className="text-xs font-bold text-[#639922] w-6 flex-shrink-0">
               {breed.rank}
             </span>
 
-            {/* Icon */}
+          
             <div className="w-10 h-10  rounded-lg flex items-center justify-center text-xl flex-shrink-0">
               <Image
                 src={breed.image}
@@ -38,7 +38,7 @@ const TopBreeds = async () => {
               />
             </div>
 
-            {/* Info */}
+           
             <div className="flex-1">
               <div className="flex items-center gap-2">
                 <h3 className="text-sm font-semibold text-[#EAF3DE]">
@@ -53,10 +53,8 @@ const TopBreeds = async () => {
               </p>
             </div>
 
-            {/* Tag */}
-            {/* <span className={`text-[10px] font-semibold px-2 py-1 rounded-full flex-shrink-0 ${tagColors[breed.tag]}`}>
-              {breed.tag}
-            </span> */}
+           
+            
           </div>
         ))}
       </div>

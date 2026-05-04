@@ -20,12 +20,12 @@ const Register = () => {
     const loginSuccess = true;
 
     if (loginSuccess) {
-      toast.success("Login Successful!"); // এই লাইনটি টোস্ট দেখাবে
-      // এরপর চাইলে রিডাইরেক্ট করতে পারেন
+      toast.success("Login Successful!"); 
+     
     } else {
       toast.error("Login Failed! Please try again.");
     }
-    // Validation
+   
     if (name.length < 3) {
       return setError("নাম কমপক্ষে ৩ অক্ষরের হতে হবে");
     }
@@ -57,8 +57,7 @@ const Register = () => {
     const loginSuccess = true;
 
     if (loginSuccess) {
-      toast.success("Login Successful!"); // এই লাইনটি টোস্ট দেখাবে
-      // এরপর চাইলে রিডাইরেক্ট করতে পারেন
+      toast.success("Login Successful!"); 
     } else {
       toast.error("Login Failed! Please try again.");
     }
@@ -68,7 +67,7 @@ const Register = () => {
   return (
     <div className="min-h-screen bg-[#0a1f05] flex items-center justify-center px-4 py-10">
       <div className="bg-[#1a3a0a] border border-[#3B6D11] rounded-2xl p-9 w-full max-w-md">
-        {/* TOP ICON */}
+       
         <div className="text-center mb-6">
           <div className="w-14 h-14 bg-[#97C459] rounded-xl inline-flex items-center justify-center text-3xl">
             🐄
@@ -81,9 +80,9 @@ const Register = () => {
           </p>
         </div>
 
-        {/* FORM */}
+        
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          {/* Name */}
+          
           <div>
             <label className="text-xs text-[#97C459] mb-1 block">নাম</label>
             <input
@@ -94,7 +93,7 @@ const Register = () => {
             />
           </div>
 
-          {/* Email */}
+         
           <div>
             <label className="text-xs text-[#97C459] mb-1 block">ইমেইল</label>
             <input
@@ -105,7 +104,7 @@ const Register = () => {
             />
           </div>
 
-          {/* Photo URL */}
+         
           <div>
             <label className="text-xs text-[#97C459] mb-1 block">
               ছবির লিংক (Photo URL)
@@ -118,7 +117,7 @@ const Register = () => {
             />
           </div>
 
-          {/* Password */}
+     
           <div>
             <label className="text-xs text-[#97C459] mb-1 block">
               পাসওয়ার্ড
@@ -131,14 +130,14 @@ const Register = () => {
             />
           </div>
 
-          {/* Error */}
+          
           {error && (
             <p className="text-xs text-red-400 bg-red-900/20 border border-red-800 px-3 py-2 rounded-lg">
               ⚠️ {error}
             </p>
           )}
 
-          {/* Register Button */}
+         
           <button
             type="submit"
             className="w-full bg-[#97C459] text-[#173404] font-semibold text-sm py-2.5 rounded-lg hover:bg-[#C0DD97] transition mt-1"
@@ -146,7 +145,7 @@ const Register = () => {
             ✅ রেজিস্ট্রেশন করুন
           </button>
 
-          {/* Reset Button */}
+        
           <button
             type="reset"
             onClick={() => setError("")}
@@ -156,23 +155,23 @@ const Register = () => {
           </button>
         </form>
 
-        {/* DIVIDER */}
+        
         <div className="flex items-center gap-3 my-5">
           <hr className="flex-1 border-[#3B6D11]" />
           <span className="text-xs text-[#639922]">অথবা</span>
           <hr className="flex-1 border-[#3B6D11]" />
         </div>
 
-        {/* GOOGLE LOGIN */}
+       
         <button
           onClick={handleGoogleLogin}
           className="w-full bg-[#0f2206] text-[#C0DD97] text-sm py-2.5 rounded-lg border border-[#3B6D11] hover:bg-[#2d5a14] transition flex items-center justify-center gap-2"
         >
           
-         <FaGoogle /> Google দিয়ে Continue করুন
+         <FaGoogle  /> Google দিয়ে Continue করুন
         </button>
 
-        {/* Login Link */}
+     
         <p className="text-center mt-5 text-xs text-[#639922]">
           অ্যাকাউন্ট আছে?{" "}
           <Link

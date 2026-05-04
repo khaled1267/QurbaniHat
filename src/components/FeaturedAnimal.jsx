@@ -1,22 +1,19 @@
 
-
-import Image from "next/image";
-import Link from "next/link";
 import Animal from "./Animal";
 
-const FeaturedAnimals =   async() => {
+const FeaturedAnimals = async() => {
     const response = await fetch(
-    "https://qurbani-hat-iota.vercel.app/animal.json",
+    "http://localhost:3000/animal.json",
   );
   const data = await response.json();
-  console.log(data);
+  
   const featured = data.slice(0, 4);
-  console.log(featured);
+  
     
 
   return (
     <section className="mt-12 w-10/12 mx-auto">
-      {/* Section Header */}
+     
       <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-2xl font-semibold text-[#639922] ">
@@ -27,7 +24,7 @@ const FeaturedAnimals =   async() => {
         
       </div>
 
-      {/* Cards Grid */}
+     
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {featured.map((animal) => (
          <Animal key={animal.id} animal={animal} />
