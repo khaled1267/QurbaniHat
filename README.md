@@ -34,24 +34,24 @@ QurbaniHat is a modern livestock marketplace where users can explore animals for
 
 ## 📦 NPM Packages Used
 
-| Package | Purpose |
-|---------|---------|
-| `next` | React Framework |
-| `react` | UI Library |
-| `better-auth` | Authentication system |
-| `lottie-react` | Lottie animations |
-| `animate.css` | CSS animations |
-| `react-hot-toast` | Toast notifications |
-| `react-icons` | Icons (GiCow, FaFacebook etc.) |
-| `@heroui/react` | UI Components (Modal, Button etc.) |
-| `@gravity-ui/icons` | Icons |
-| `tailwindcss` | Utility-first CSS styling |
+| Package             | Purpose                            |
+| ------------------- | ---------------------------------- |
+| `next`              | React Framework                    |
+| `react`             | UI Library                         |
+| `better-auth`       | Authentication system              |
+| `lottie-react`      | Lottie animations                  |
+| `animate.css`       | CSS animations                     |
+| `react-hot-toast`   | Toast notifications                |
+| `react-icons`       | Icons (GiCow, FaFacebook etc.)     |
+| `@heroui/react`     | UI Components (Modal, Button etc.) |
+| `@gravity-ui/icons` | Icons                              |
+| `tailwindcss`       | Utility-first CSS styling          |
 
 ---
 
 ## 🛠️ How to Run Locally
 
-git clone https://github.com/your-username/qurbani-hat
+git clone[ https://github.com/your-username/qurbani-hat](https://github.com/khaled1267/QurbaniHat)
 cd qurbani-hat
 npm install
 npm run dev
@@ -60,28 +60,16 @@ Open http://localhost:3000 in your browser.
 
 ---
 
-## 🔐 Environment Variables
-
-Create a .env.local file in the root directory:
-
-BETTER_AUTH_SECRET=your_secret_here
-BETTER_AUTH_URL=http://localhost:3000
-DATABASE_URL=your_database_url
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
-
----
-
 ## 🔒 Routes
 
-| Route | Type | Description |
-|-------|------|-------------|
-| `/` | Public | Home page |
-| `/all-animals` | Public | All animals list |
-| `/login` | Public | Login page |
-| `/register` | Public | Register page |
+| Route           | Type    | Description              |
+| --------------- | ------- | ------------------------ |
+| `/`             | Public  | Home page                |
+| `/all-animals`  | Public  | All animals list         |
+| `/login`        | Public  | Login page               |
+| `/register`     | Public  | Register page            |
 | `/animals/[id]` | Private | Animal details & booking |
-| `/profile` | Private | My profile page |
+| `/profile`      | Private | My profile page          |
 
 ---
 
