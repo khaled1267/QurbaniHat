@@ -79,7 +79,7 @@ const Banner = () => {
             }}
           />
         </div>
-        <p className="text-[#97C459] text-xs font-medium mt-2 md:mt-3">
+        <p className="text-[#97C459] text-xs font-medium mt-2 md:mr-4">
           Premium Livestock
         </p>
       </div>

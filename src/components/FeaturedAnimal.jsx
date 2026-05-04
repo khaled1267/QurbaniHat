@@ -3,7 +3,7 @@ import Animal from "./Animal";
 
 const FeaturedAnimals = async() => {
     const response = await fetch(
-    "http://localhost:3000/animal.json",
+    "https://qurbani-hat-iota.vercel.app/animal.json",
   );
   const data = await response.json();
   
