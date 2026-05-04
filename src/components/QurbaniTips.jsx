@@ -17,7 +17,7 @@ const QurbaniTips = async () => {
           Qurbani <span className="text-[#97C459]">Tips</span>
         </h2>
         <p className="text-xs text-[#639922] mt-1">
-          সঠিক পশু বেছে নেওয়ার গাইড
+          সঠিক পশু ব বেছে নেওয়ার গাইড 
         </p>
       </div>
 

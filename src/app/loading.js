@@ -13,9 +13,9 @@ export default function Loading() {
 
         </div>
 
-        {/* Text */}
+     
         <p className="text-gray-600 text-sm font-medium tracking-wide">
-          Loading your experience...
+          Loading your experience....
         </p>
 
       </div>

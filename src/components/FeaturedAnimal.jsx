@@ -19,7 +19,7 @@ const FeaturedAnimals = async() => {
           <h2 className="text-2xl font-semibold text-[#639922] ">
             Featured <span className="text-[#639922]">Animals</span>
           </h2>
-          <p className="text-xs text-[#639922] mt-1">এই সপ্তাহের সেরা বাছাই</p>
+          <p className="text-xs text-[#639922] mt-1">এই সপ্তাহের সেরা পশু</p>
         </div>
         
       </div>
