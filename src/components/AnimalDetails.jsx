@@ -116,7 +116,7 @@ const AnimalDetails = ({ animal }) => {
             </div>
           </div>
 
-          {/* RIGHT SIDE - Booking Form */}
+
           <div>
             <div className="bg-[#1a3a0a] border border-[#97C459] rounded-2xl p-6 sticky top-8">
               <h2 className="text-lg font-semibold text-[#EAF3DE] mb-1">

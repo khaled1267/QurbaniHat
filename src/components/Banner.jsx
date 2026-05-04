@@ -27,7 +27,7 @@ const Banner = () => {
         </h1>
 
         <p className="animate__animated animate__fadeInLeft animate__delay-1s text-sm text-[#97C459] leading-relaxed mb-6 max-w-sm mx-auto md:mx-0">
-          গরু, ছাগল, ভেড়া — সরাসরি খামার থেকে।
+          গরু, ছাগল, — সরাসরি খামার থেকে।
           সহজে বুকিং দিন, ঘরে বসেই।
         </p>
 

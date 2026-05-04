@@ -12,7 +12,7 @@ const TopBreeds = async () => {
         <h2 className="text-2xl font-semibold text-[#97C459]">
           Top <span className="text-[#97C459]">Breeds</span>
         </h2>
-        <p className="text-xs text-[#639922] mt-1">এই বছরের জনপ্রিয় জাত</p>
+        <p className="text-xs text-[#639922] mt-1">এই বছরের জনপ্রিয় পশু  </p>
       </div>
 
       
